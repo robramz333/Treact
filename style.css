@@ -512,6 +512,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 #pricing .section__para {
   max-width: 576px;
@@ -519,7 +520,7 @@ header {
 }
 .plans {
   display: flex;
-  position: relative;
+
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
@@ -578,6 +579,15 @@ header {
     115deg,
     rgb(56, 178, 172) 0%,
     rgb(129, 230, 217) 100%
+  );
+}
+.plan:nth-child(3) .plan__stripe,
+.plan:nth-child(3) .plan__button {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
   );
 }
 .plan__top {
@@ -662,6 +672,24 @@ header {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.plan__button:hover {
+  transform: translate(1px, -1px);
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.plans__blob {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+  height: 256px;
+  width: 256px;
+  opacity: 0.25;
 }
 /* RESPONSIVE */
 @media (max-width: 1280px) {
